@@ -1,0 +1,79 @@
+
+*{
+    margin:0;
+
+}
+.login{
+    color:grey;
+    height:800px;
+    display:block;
+    margin-top:30px;
+    background:url('https://static.vecteezy.com/system/resources/previews/030/608/654/large_2x/mt-fuji-at-kawaguchiko-lake-in-japan-beautiful-scenic-landscape-of-mountain-fuji-or-fujisan-with-reflection-on-shoji-lake-at-dawn-with-twilight-sky-japan-ai-generated-free-photo.jpg') no-repeat;    
+    background-size:cover;
+    background-position:center;
+}
+
+.a{
+    color:white;
+    display:none;
+    background:transparent;
+    border-style:solid;
+    border-color:blanchedalmond;
+    border-width:2px;
+    padding:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px;
+    box-shadow:0 0 20px inset;
+    width:300px;
+    height:450px;
+}
+    
+li{
+    display:inline-block;
+    padding-left:30px;
+    cursor:pointer;
+    color:white;
+
+}
+ul{
+   margin-top:0px;
+   display:inline; 
+   margin-left:900px;
+
+
+}
+
+input{
+    padding:15px;
+    width:200px;
+    height:5px;
+    margin-bottom:20px;
+    margin-top:20px;
+    background:transparent;
+    color:black;
+    border:none;
+    outline:none;
+    border-bottom:2px solid;
+    border-bottom-color:antiquewhite;
+}
+.check{
+    font-size:15px; 
+    display:inline-block;
+    padding-left:15px;
+    cursor:pointer;
+}
+
+button{
+    width:220px;
+    margin-top:10px;
+    position:center;
+    margin-left:15px;
+    cursor:pointer;
+}
+.h1{
+    text-align:center;
+    margin-top:30px;
+    color:white;
+    font-size:30px;
+}
+
