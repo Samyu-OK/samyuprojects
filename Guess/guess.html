@@ -1,0 +1,62 @@
+<html>
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="C:\Users\DELL\Desktop\js\img\stick.jpeg">
+<head>
+    <title>Guess The Num...</title>
+</head>
+    <body class="full">
+        <link rel="stylesheet" href="style.css">
+        <center>
+<div class="title">
+<h1>Guess The Number</h1>
+</div>
+
+<div class="bar">
+<input id="one">
+</div>
+<div class="box">
+<button onclick="change()">Check</button>
+</div>
+<div class="para">
+<p id="two">You are Wrong/Right</p>
+<p id="sco">Score=10</p>
+</div>
+</center>
+   </body>
+</html>
+<script>
+    var inp=document.getElementById("one")
+    var result=document.getElementById("two")
+    var p=document.getElementById("sco")
+
+    var rando=Math.floor(Math.random()*10)+1  
+    var score=10
+
+    function change()
+    {
+        var num=inp.value
+        if(rando==num)
+    {
+        score=score+1
+        p.textContent="Your Score:"+score
+        console.log("Right")
+        result.textContent="Right ❤️"
+        alert("You Won!!!......")
+
+    }
+    else
+    {
+        score=score-1
+        if(score==0)
+    {
+        alert("You Lost.....")
+    }
+        p.textContent="Your Score:"+score
+        result.textContent="Wrong 💔"
+    }
+    } 
+
+</script>
+
+
+

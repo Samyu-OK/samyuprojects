@@ -1,0 +1,61 @@
+*{
+    margin:0;
+}
+.full{
+    display:block;
+    justify-items: center;
+    background:url('https://wallpapers.com/images/featured/cute-tablet-5wuaoyzi12nqs6ys.jpg')no-repeat;
+    background-color: rgb(252, 222, 227);
+    background-position:center;
+    background-size:contain;
+    min-height: 500px;
+    background-blend-mode:multiply;
+    
+}
+.title{
+    color:rgb(253, 252, 251);
+    margin-top:150px;
+    padding:10px;
+    display:inline-block;
+    
+}
+
+.bar{
+    border-style:dotted;
+    border-color:whitesmoke;
+    box-shadow:0 0 30px;
+    color:white; 
+    width:180px; 
+    display:block;
+}
+input{
+    border:none;
+    outline:none;
+    border-bottom:2px solid;
+    border-bottom-color:antiquewhite;
+    background-color:pink;
+    display:inline-block;
+
+    
+    
+
+}
+.box{
+    padding-top:20px;
+}
+button{
+    cursor:pointer;
+    background-color:lightgrey;
+    box-shadow:0 0 20px;
+    border-color:antiquewhite;
+    border-style: 2px solid;
+    color:white;
+}
+.para{
+    color:rgb(255, 253, 253);
+    font-size:25px;
+    justify-content:center;
+    padding-top:20px;
+}
+
+
