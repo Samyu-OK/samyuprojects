@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/paper-plane.png" />
+  <title>Travella</title>
+  <link rel="stylesheet" href="common.css" />
+</head>
+
+
+<body class="bg">
+
+<div class="modal-overlay" style="display: none;">
+    <div class="booking-modal">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h1 class="modal-title" id="modalTitle">Book Your Trip</h1>
+            <p class="modal-subtitle" id="modalSubtitle"></p>
+        </div>
+
+        <div class="tour-info">
+            <h2 class="tour-title" id="tourTitle"></h2>
+            <div class="tour-location">
+                <span class="location-icon">📍</span>
+                <span id="tourLocation"></span>
+            </div>
+            <div class="pricing-row">
+                <div>
+                    <div class="base-price" id="basePriceText"></div>
+                </div>
+                <div class="total-section">
+                    <div class="total-label" id="totalLabel"></div>
+                    <div class="total-price" id="totalPrice"></div>
+                </div>
+            </div>
+        </div>
+
+        <form class="form-content" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">👤 Full Name</label>
+                    <input type="text" class="form-input" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">📧 Email Address</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">📞 Phone Number</label>
+                    <input type="tel" class="form-input" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">👥 Number of People</label>
+                    <input type="number" id="peopleCount" class="form-input" value="1" min="1" max="20" onchange="updateTotal()" required>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label class="form-label">📅 Preferred Travel Date</label>
+                <div class="date-input">
+                    <input type="date" id="travelDate" class="form-input" required>
+                    <span class="date-icon"></span>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label class="form-label">Special Requests (Optional)</label>
+                <textarea class="form-input textarea" placeholder="Any special requirements or requests..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="confirmBtn">Confirm Booking</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

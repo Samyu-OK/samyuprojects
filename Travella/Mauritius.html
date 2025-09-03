@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/paper-plane.png" />
+  <title>Mauritius</title>
+  <link rel="stylesheet" href="common.css" />
+</head>
+
+
+<body class="bg">
+  
+    <div class="bar" onclick="toggleMenu()">
+      <img src="img/menubars.png" alt="Menu Icon" />
+    </div>
+
+     <ul class="cat" id="sidebar">
+    <div class="menubar" onclick="bar()" >
+      <img src="img/menubars.png" >
+    </div>
+      <li class="collect"><a href="packages.html"> Popular<img src="img/popularity.png" class="nav-link"></a></li>
+      <li class="collect"><a href="flight.html"> Flights<img src="img/plane.png" class="nav-link"></a></li>
+      <li class="collect"><a href="hotels.html"> Hotels<img src="img/resorts.png" class="nav-link"></a></li>
+      <li class="collect"><a href="Service.html">Services<img src="img/paper-plane.png" class="nav-link"></a></li>
+
+    </ul>
+
+  
+    <div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="destiny.html">Destinations</a></li>
+        <li class="nav-item"><a href="packages.html">Packages</a></li>
+        <li class="nav-item"><a href="Bookings.html">Bookings</a></li>
+      </ul>
+    </div>
+<div class="contain">
+    <h1 class="text">Mauritius <img src="img/mauritius.png"><hr></h1>
+      <h2 class="text1">| Travella <img src="img/paper-plane.png"></h2>
+
+ <div class="slider">
+  <div class="slides">
+    <img class="slide" src="img/ms7.jpg">
+    <img class="slide" src="img/ms9.jpg">
+    <img class="slide" src="img/ms17.jpg">
+    <img class="slide" src="img/ms21.jpg">
+    </div>
+   <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+
+</div>
+</div>
+
+<h1 class="spots">Exploring Spots</h1>
+<div class="container" id="spotContainer"></div>
+
+ <h1 class="headings">Popular Travel Packages</h1>
+<div class="package-container" id="packageContainer"></div>
+
+<div id="modalContainer"></div>
+
+<script>
+  fetch('popup.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('modalContainer').innerHTML = html;
+    });
+</script>
+
+<script src="common.js"></script>
+<script src="mauri.js"></script>
+</body>
+</html>
+
+
+

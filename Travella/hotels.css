@@ -1,0 +1,551 @@
+
+*{
+    margin:0;
+
+}
+a{
+  text-decoration: none;
+  outline:none;
+  color: inherit;
+}
+.bg{
+    background-color:#f8fafc;
+    height: max-content;
+    overflow-x: hidden;
+    z-index: 1;
+}
+.image{
+    width:100%;
+    height:720px;
+    
+}
+.nav-list{
+   position: fixed;
+    right: 5%;
+    top: 30px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    cursor: pointer; 
+    z-index: 2;
+    
+}
+.nav-item{
+    background-color:transparent;
+    color:rgb(43, 42, 42);
+    padding: 10px;
+    font-size:18px;
+}
+.nav-item:hover{
+    background-color:whitesmoke;
+    color:rgb(39, 38, 38);
+    border-radius: 50px;  
+    transition:0.2s;  
+}
+
+.bar{
+    position:fixed;
+    top:30px;
+    left:30px;
+    cursor:pointer;
+    z-index:2;
+}
+.cat{
+    position:fixed;
+    top:15px;
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    width:200px;
+    height:415px;
+    color:whitesmoke;
+    border-radius: 25px;
+    box-shadow:0 0 5px inset black;
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+    display:block;
+    left: -250px; 
+    transition: left 0.8s ease;
+}
+
+.cat.active {
+  left: 10px;
+}
+.collect{
+   
+    color:black;
+    list-style: none;
+    display:block;
+    position:relative;
+    top: 45px;
+    margin-top: 32px;
+    margin-left:25px;
+    background-color:transparent;
+    backdrop-filter: blur(2px);
+    border-radius:2px;
+    padding:10px;
+    width:max-content;
+    height: fit-content;
+    cursor: pointer;
+    font-size:20px;
+    
+    
+}
+.collect:hover{
+    background-color:rgb(204, 202, 202);
+    color:rgb(255, 255, 255);
+    backdrop-filter: blur(1px);
+    border-radius:10px;
+    padding:10px;
+    transition: opacity 0.3s ease;
+}
+.menubar{
+    position: absolute;
+    top:15px;
+    left:20px;
+    display: block; 
+    cursor: pointer; 
+
+}
+.head-container{
+    background-color:white;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+    display: block;
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    top:0px;
+    z-index: 1;
+}
+.headers{
+    position:fixed;
+    left:150px;
+    top:25px;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: Georgia;
+    font-style: normal;
+    z-index: 1;
+
+}
+
+
+
+.hotel-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: relative;
+  top:120px;
+  left:15px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: inline-flex;
+  width: 48%;
+  
+
+  
+}
+.hotel-card:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.hotel-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-info h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.hotel-info p {
+  margin: 5px 0;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0f0ff;
+  color: #0077cc;
+  padding: 4px 10px;
+  margin-right: 5px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+button.book-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+button.book-btn:hover {
+   background-color: #0b568b;
+
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.booking-modal {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 120%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 30px 30px 10px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.modal-subtitle {
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+.hotel-information{
+    margin: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    width: 90%;
+}
+
+.hotel-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hotel-location {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.location-icon {
+    margin-right: 8px;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.base-price {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.total-section {
+    text-align: right;
+}
+
+.total-label {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.total-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4facfe;
+}
+
+.form-content {
+    padding: 0 30px 30px;
+    margin-right: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group.full-width {
+    flex: none;
+    width: 100%;
+}
+
+.form-label {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-label-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.textarea {
+    margin-top: 10px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.btn-cancel {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+}
+
+.btn-cancel:hover {
+    background: rgba(108, 117, 125, 0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+
+  .head-container {
+    height: auto;
+    padding: 10px;
+  }
+
+  .headers {
+    position: static;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+  }
+
+  
+  .hotel-card {
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    margin: 0 0 20px 0;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+
+  .hotel-info {
+    padding: 10px;
+  }
+
+  .hotel-info h3 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  button.book-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .booking-modal {
+    width: 95%;
+    max-width: 95%;
+    border-radius: 12px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-subtitle {
+    font-size: 14px;
+  }
+
+
+  .hotel-information {
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .total-price {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    top: 15px;
+    right: 10px;
+    gap: 10px;
+    font-size: 14px;
+  }
+}

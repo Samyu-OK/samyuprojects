@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/paper-plane.png" />
+  <title>Europe</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+
+
+<body class="bg">
+  
+    <div class="bar" onclick="toggleMenu()">
+      <img src="img/menubars.png" alt="Menu Icon" />
+    </div>
+
+     <ul class="cat" id="sidebar">
+    <div class="menubar" onclick="bar()" >
+      <img src="img/menubars.png" >
+    </div>
+      <li class="collect"><a href="packages.html"> Popular<img src="img/popularity.png" class="nav-link"></a></li>
+       <li class="collect"><a href="flight.html"> Flights<img src="img/plane.png" class="nav-link"></a></li>
+       <li class="collect"><a href="hotels.html"> Hotels<img src="img/resorts.png" class="nav-link"></a></li>
+       <li class="collect"><a href="Service.html">Services<img src="img/paper-plane.png" class="nav-link"></a></li>
+
+      </ul>
+
+  
+    <div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="destiny.html">Destinations</a></li>
+        <li class="nav-item"><a href="packages.html">Packages</a></li>
+        <li class="nav-item"><a href="Bookings.html">Bookings</a></li>
+      </ul>
+    </div>
+<div class="contain">
+    <h1 class="text">Europe<hr></h1>
+      <h2 class="text1">| Travella <img src="img/paper-plane.png"></h2>
+
+ <div class="slider">
+  <div class="slides">
+    <img class="slide" src="img/ita.jpg">
+    <img class="slide" src="img/sp19.jpg">
+    <img class="slide" src="img/p1.jpg">
+    <img class="slide" src="img/gr4.jpg">
+    </div>
+   <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+
+</div>
+</div>
+<div class="title">
+  Countries
+</div>
+ <div id="cont-container"></div>
+ 
+
+
+
+<script src="europe.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/paper-plane.png" />
+  <title>Travella</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body class="bg">
+  <div>
+    <img src="img/beach3.webp" class="image"onclick="cl()">
+     <h1 class="texts">Welcome! Wanna Travel around... you chose the right place. We provide the best services...</h1>
+     <button class="ton"><a href="destiny.html">Visit Places</a></button>
+    </div>
+
+    <div class="bar" onclick="toggleMenu()">
+      <img src="img/menubars.png" alt="Menu Icon" />
+    </div>
+
+     <ul class="cat" id="sidebar">
+    <div class="menubar" onclick="bar()" >
+      <img src="img/menubars.png" >
+    </div>
+       <li class="collect"><a href="#popular"> Popular<img src="img/popularity.png" class="nav-link"></a></li>
+       <li class="collect"><a href="flight.html"> Flights<img src="img/plane.png" class="nav-link"></a></li>
+       <li class="collect"><a href="hotels.html"> Hotels<img src="img/resorts.png" class="nav-link"></a></li>
+       <li class="collect"><a href="Service.html">Services<img src="img/paper-plane.png" class="nav-link"></a></li>
+
+      </ul>
+
+  
+    <div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="destiny.html">Destinations</a></li>
+        <li class="nav-item"><a href="packages.html">Packages</a></li>
+        <li class="nav-item"><a href="Bookings.html">Bookings</a></li>
+        <li class="nav-item" onclick="boxup()"><img src="img/account (1).png" class="log"></li>
+      </ul>
+    </div>
+
+   <div>
+  <form class="pos" onsubmit="login(event)">
+    <table class="a">
+      <tr>   
+        <td class="h1">Login</td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="Name" class="inputs"></td>
+      </tr>
+      <tr>
+        <td><input type="email" id="loginEmail" placeholder="Email" class="inputs"></td>
+      </tr>
+      <tr>
+        <td><input type="password" id="loginPassword" placeholder="Password" class="inputs"></td>
+      </tr>
+      <tr>
+        <td class="check" onclick="pass()">Forgot password?</td>
+        <td class="check" onclick="create()">👤 Create account</td>
+      </tr>    
+      <tr>
+        <td><button type="submit" class="buttons">Login</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div>
+  <form class="pos3" onsubmit="return checkPasswords(event)">
+    <table class="a3">
+      <tr>   
+        <td class="head2">Forgot Password ?</td>
+      </tr>
+      <tr>
+        <td><input type="password" id="password1" placeholder="New password" class="inputs2" required></td>
+      </tr>
+      <tr>
+        <td><input type="password" id="password2" placeholder="Confirm new password" class="inputs2" required></td>
+      </tr>
+      <tr>
+        <td><button type="submit" class="buttons2">Change password</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="buttons2" onclick="clrs()">Go Back</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<form class="pos1" onsubmit="return createAccount(event)">
+  <table class="a1">
+    <tr>   
+      <td class="head">Create Account</td>
+    </tr>
+    <tr>
+      <td><input type="text" id="name" placeholder="Full Name" class="inputs1" required></td>
+    </tr>
+    <tr>
+      <td><input type="email" id="email" placeholder="Email" class="inputs1" required></td>
+    </tr>
+    <tr>
+      <td><input type="password" id="password1_create" placeholder="Password" class="inputs1" required></td>
+    </tr>
+    <tr>
+      <td><input type="password" id="password2_create" placeholder="Confirm Password" class="inputs1" required></td>
+    </tr>
+    <tr>
+      <td><button type="submit" class="buttons1">Create Account</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" class="buttons1" onclick="clr()">Go Back</button></td>
+    </tr>
+  </table>
+</form>
+ 
+    <section id="popular">
+    <h1 class="title">Gallery</h1>
+    <div class="space">
+      <div class="gallery-container">
+        <div class="gallery-card">
+         <a href="Island.html"><img src="img/beach.jpg" alt="Island" class="Gallery" /></a>
+          <h2 class="overlay-text"><a href="Island.html">Island</a></h2>
+        </div>
+        <div class="gallery-card">
+         <a href="Europe.html"><img src="img/Florence.jpg" alt="Heritage" class="Gallery" /></a>
+          <h2 class="overlay-text"><a href="Europe.html">Europe</a></h2>
+        </div>
+        <div class="gallery-card">
+        <a href="Seasonal.html"><img src="img/cherryblos.jpg" alt="Seasonal" class="Gallery" /></a>
+          <h2 class="overlay-text"><a href="Seasonal.html">Seasonal</a></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
