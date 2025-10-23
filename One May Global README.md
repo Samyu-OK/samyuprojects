@@ -59,6 +59,3 @@ Implemented smooth animations and dynamic 3D scenes to make mentorship programs 
 
 
 
-## Deployment
-
-https://onemayglobal.com/
